@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gautam Kumar Jha | Trading Community</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1113216874620613');
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        :root {
+            --bg: #050505;
+            --card: #101010;
+            --gold: #ffbd00;
+            --gold-light: #ffe16a;
+            --text: #ffffff;
+            --muted: #a5a5a5;
+            --border: rgba(255, 189, 0, 0.45);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: radial-gradient(circle at top right, rgba(255, 189, 0, 0.12), transparent 35%), var(--bg);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-height: 720px;
+            object-fit: cover;
+            border-radius: 28px;
+            border: 1px solid var(--border);
+            box-shadow: 0 0 45px rgba(255, 189, 0, 0.18);
+        }
+
+        .tag {
+            display: inline-block;
+            color: #111;
+            background: var(--gold);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 13px;
+            margin-bottom: 22px;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 5vw, 72px);
+            line-height: 1.08;
+            margin-bottom: 22px;
+            font-weight: 900;
+        }
+
+        h1 span,
+        h2 span {
+            color: var(--gold);
+        }
+
+        .hero-text {
+            color: var(--muted);
+            font-size: 19px;
+            margin-bottom: 30px;
+            max-width: 560px;
+        }
+
+        .telegram-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: #080808;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            padding: 17px 28px;
+            border-radius: 14px;
+            font-weight: 900;
+            font-size: 17px;
+            box-shadow: 0 0 28px rgba(255, 189, 0, 0.35);
+            transition: 0.25s ease;
+        }
+
+        .telegram-btn:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 0 40px rgba(255, 189, 0, 0.6);
+        }
+
+        .telegram-btn small {
+            font-size: 22px;
+        }
+
+        section {
+            padding: 90px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 45px;
+        }
+
+        h2 {
+            font-size: clamp(32px, 4vw, 52px);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .feature-card {
+            background: linear-gradient(145deg, #151515, #090909);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            transition: 0.25s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+        }
+
+        .feature-icon {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: var(--gold);
+            font-size: 23px;
+            margin-bottom: 13px;
+        }
+
+        .feature-card p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.88)), url("hero.jpg") center/cover;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #c1c1c1;
+            font-size: 19px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .floating-btn {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: #080808;
+            background: var(--gold);
+            padding: 14px 19px;
+            border-radius: 50px;
+            font-weight: 900;
+            box-shadow: 0 0 25px rgba(255, 189, 0, 0.45);
+        }
+
+        @media (max-width: 850px) {
+            .hero {
+                padding: 45px 0 70px;
+            }
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-image {
+                max-height: none;
+                order: -1;
+            }
+            .hero-text {
+                font-size: 17px;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 65px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .telegram-btn {
+                width: 100%;
+                font-size: 15px;
+                padding: 16px;
+            }
+            .floating-btn {
+                right: 12px;
+                bottom: 12px;
+                padding: 12px 15px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="container hero-grid">
+            <div>
+                <div class="tag">GAUTAM KUMAR JHA TRADERS</div>
+
+                <h1>
+                    Learn Trading.<br /> Build <span>Skills.</span><br /> Grow Together.
+                </h1>
+
+                <p class="hero-text">
+                    Join Gautam Kumar Jha’s trading community and learn practical strategies, risk management, and disciplined market analysis.
+                </p>
+
+                <a class="telegram-btn track-telegram" href="https://t.me/+faQNBMtK1pE3NDQ1" target="_blank" rel="noopener noreferrer">
+          <small>✈</small>
+          JOIN OUR TELEGRAM CHANNEL
+        </a>
+            </div>
+
+            <div>
+                <img class="hero-image" src="hero.jpg" alt="Gautam Kumar Jha trading community" />
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="section-heading">
+                <h2>What You’ll <span>Get Inside</span></h2>
+                <p>
+                    Everything you need to trade smarter, delivered directly to your Telegram every day.
+                </p>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Learn New Skills</h3>
+                    <p>
+                        Understand option trading through simple and practical lessons designed for real market conditions.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📘</div>
+                    <h3>Daily Trading Strategy</h3>
+                    <p>
+                        Get clear market setups with entry ideas, targets, stop-loss concepts, and risk-management guidance.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Intraday Option Trading</h3>
+                    <p>
+                        Explore focused intraday concepts for Nifty and Bank Nifty options with disciplined planning.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Risk Management</h3>
+                    <p>
+                        Learn why position sizing, stop-loss planning, and capital protection are important for traders.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Trade With Confidence</h3>
+                    <p>
+                        Apply structured strategies with patience, proper preparation, and a learning-focused mindset.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Support Community</h3>
+                    <p>
+                        Connect with a community of learners and stay consistent with your trading education journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Don’t Trade <span>Alone</span> 🚀</h2>
+
+            <p>
+                Join the Telegram community and start learning trading strategies, market concepts, and risk-management practices from today.
+            </p>
+
+            <a class="telegram-btn track-telegram" href="https://t.me/+faQNBMtK1pE3NDQ1" target="_blank" rel="noopener noreferrer">
+        <small>✈</small>
+        JOIN NOW — IT’S FREE
+      </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            Trading content is for educational purposes only and is not financial advice.
+        </p>
+        <p>Managed by Gautam Kumar Jha</p>
+    </footer>
+
+    <a class="floating-btn track-telegram" href="https://t.me/+faQNBMtK1pE3NDQ1" target="_blank" rel="noopener noreferrer" aria-label="Join Telegram channel">
+    ✈ Join Telegram
+  </a>
+
+    <script>
+        document.querySelectorAll(".track-telegram").forEach(function(button) {
+            button.addEventListener("click", function() {
+                if (typeof fbq === "function") {
+                    fbq("track", "Lead");
+                    fbq("trackCustom", "TelegramJoinClick");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
